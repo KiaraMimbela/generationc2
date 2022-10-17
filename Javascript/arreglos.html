@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+</head>
+<body>
+    <script>
+    //Arreglos
+    //conjunto de datos, ordenados según su ingreso, separados por la coma
+    //TODOS los arreglos comienzan en la posición cero (0)
+    //arreglo = tamaño predefinido, no puede cambiar
+    //lista = tamaño dinamico 
+    var vocales = ["u","i","e","o","a"];
+    //tiene 5 elementos, el ultimo esta en la posicion 4
+    //el primero en la posicion 0
+    console.log(vocales);
+    //length -> cantidad de elementos o tamaño del arreglo
+    console.log(vocales[0]);
+    console.log(vocales[1]);
+    console.log(vocales[2]);
+    console.log(vocales[3]);
+    console.log(vocales[4]);
+    console.log(vocales[5]);
+    console.log(vocales[-1]);
+    console.log(vocales[3-2]); //vocales[1]
+    console.log(vocales[2+3]);
+    console.log(vocales[1,2,3]); //solo escribe la ultima
+    //re escribiendo datos, en una posicion especifica
+    vocales[1] = "y";
+    console.log(vocales);
+    //push,agrega un dato al final
+    vocales.push("i");
+    console.log(vocales);
+    //pop, elimina el ultimo dato del arreglo
+    vocales.pop("");
+    console.log(vocales);
+
+    vocales.pop("");
+    vocales.pop("");
+    vocales.pop("");
+    vocales.pop("");
+    vocales.pop("");
+    console.log(vocales);
+
+    var arreglo1 = [];  //arreglo vacio
+    //el tamaño es cero
+    console.log(arreglo1.length);
+    arreglo1.push(1);
+    arreglo1.push(8);
+    console.log(arreglo1);
+
+    //a la variable (var ultimo) creada se le designo el ultimo dato del arreglo 1
+    var ultimo = arreglo1.pop();
+    console.log(ultimo);
+
+
+    /*
+    vocales= "aeiou";
+    console.log(vocales);
+    console.log("string aeiou", vocales[3]) */
+
+
+    </script>
+</body>
+</html>
