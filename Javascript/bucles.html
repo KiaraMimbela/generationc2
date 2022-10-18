@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+</head>
+<body>
+    <script>
+        //bucle FOR
+        // let variable que vive por momentos
+        /* for(let variable(paso0); condicional(paso1); incrementar o decrementar(paso3 y vuelve al paso1)){
+            (paso2) dentro del for
+        }
+        el bucle se termina hasta que la condicional sea falsa
+        */
+        for(let i = 0; i < 10; i++){ //i=i+1==i++==i+1
+            console.log("El valor de i es", i);
+        }
+        console.clear();
+
+        var numeros_pares = [2,4,6,8,10];
+        console.log("El arreglo es", numeros_pares);
+        //length == largo o cantidad en el array
+        /*
+        numeros_pares [numeros_pares.length-1] ; 
+        numeros_pares [5-1];
+        numeros_pares [4];*/
+        for (let index = 0; index < numeros_pares.length; index++) {
+            console.log("La posición es", index);
+            console.log("El elemento es", numeros_pares[index]);
+            console.log(" ");
+        }//recorrio el arreglo e imprimio los elementos
+
+        //otra forma
+        //var ya creados se pueden usar en el bucle
+        var valor = 0;
+        for (let i = 0; i< numeros_pares.length; i++) {
+            valor = numeros_pares[i];
+            console.log("la posicion: "+i+ ", tiene el elemento: "+valor)
+            console.log(" ");
+        }
+        console.log("elemento", valor);
+        console.log(" ");
+
+        //var : para la creación de variables globales
+        //let: solo para bloques especificos
+        //const: bloques especificos, pero se recomienda para establecer variables constantes
+
+        //variables acumuladores
+        //variable = variable + algo;
+        var suma_pares=0;//6
+        for(let i=0; i< numeros_pares.length;i++){//1
+            suma_pares = suma_pares + numeros_pares[i];
+            //suma_pares= 2 + numeros_pares[1];
+            //suma_pares= 2 + 4;
+            //suma_pares= 6;
+            console.log("suma parcial", suma_pares);
+            console.log(" ");
+        }
+        console.log(" ");
+        console.log("suma total",suma_pares);
+
+
+
+
+    </script>
+</body>
+</html>
