@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+        //condicionales
+        /* la sentencia if 
+        validar o comprobar algo para tomar alguna decisión
+        En la estructura del if no hay punto y coma.
+        Si la condicion es verdadera ingresara al if.
+        condicion == true
+
+        if(condicion){
+            //dentro del if
+        }
+
+        */
+
+        var edad = parseInt(prompt("Ingresa tu edad", 0));
+        //parseInt convierte string a numero.
+        //edad es igual o mayor que 18
+        if(edad >= 18){//true
+            console.log("Es mayor de edad");
+        }
+        if(edad < 18){
+            console.log("Es menor de edad");
+        }
+        console.clear();//limpiar consola hacia arriba
+        //else
+        if(edad >= 18){
+            console.log("Es mayor de edad");
+        }else{
+            console.log("Es menor de edad");
+        }
+        console.log("---------------");
+        //alternativa
+        if(edad < 18){
+            console.log("Es menor de edad");
+        }else{
+            console.log("Es mayor de edad");
+        }
+
+        console.log("----------");
+        //contexto
+        /*validar si un numero es mayor a 10 y menor a 20*/
+
+        var numero = parseInt(prompt("Ingresa un número",0));
+
+        //conectores &&(y) ||(o)
+        // && debe cumplir todas las condiciones para entrar en if
+        // || si se cumple una o dos de las condiciones entra al if
+        // || es una elección, o una o la otra
+        // && es inclusivo
+        // buena practica es solo poner max. 6 condicionales (depende de empresa)
+
+        // numero < 10; numero > 10; numero < 20; numero > 20
+        // numero = 10; numero = 20
+
+        if(numero > 10 && numero < 20){
+            console.log("El número esta en el rango solicitado");
+        }else{
+            console.log("No está dentro del rango");
+        }
+
+        console.log("----------");
+        // validar si un numero es mayor o menor o igual a cero
+
+        var numeroAValidar = parseInt(prompt("Ingresa un nuevo número",0));
+
+        if(numeroAValidar == 0){
+            console.log("El número es igual a cero");
+        }else if(numeroAValidar > 0){
+            console.log("El número es mayor que cero");
+        }else{
+            console.log("El número es negativo");
+        }
+
+    </script>
+</body>
+</html>
