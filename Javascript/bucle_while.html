@@ -13,14 +13,31 @@
         /*while(condicion){
         }*/
         //se debe colocar una condicion de termino o boom!
-        var contador = 0 //definiendo variable
+
+        /*var contador = 0 //definiendo variable
         //validando que la condicion es true
         while(contador <= 5){  
             console-log("Somos bacanes, los Washituring!!"); 
             //si es verdadero entra al while
             contador++ //sumar uno a la variable
-        } 
+        } */
 
+        var termino = true; //variable booleana (true o false)
+        var contador = 10;
+        //para entrar a while debe ser verdadero
+        //termino, cuando contador == 200
+        console.log("El contador", contador);
+        while(termino){
+            //console.log("El contador", contador);
+            contador = contador + 10;
+            console.log("El contador", contador);
+            if(contador == 200){
+                termino = false;
+                //console.log("El contador", contador);
+            }
+        }
+        //Ambas soluciones estan bien, era imprimir 10 y 200 sin cambiar la condicion del if
+        //for es limitado y while depende de la condicion
 
 
     </script>
