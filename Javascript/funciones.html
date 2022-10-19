@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    ><script>
+        //funciones
+        //realizan una acción especifica
+        //trozo de codigo, que solo se ejecutará cuando sea llamada
+
+        function nombre_funcion()
+        {
+            //acción o codigo a ejecutar
+        }
+        //llamado a la funcion
+        nombre_funcion();
+
+        function ejemplo(){
+            console.log("Estoy dentro de la función");
+        }
+        ejemplo();
+
+        //dentro los() se le puede poner los parametros
+        function imprimir(cantidad){//cantidad = 3
+            console.log("Parametro", cantidad);
+        }
+        //aqui es ()argumento, no se limita a numero o string o arreglo
+        imprimir([2,3,4]);
+        //console.log(cantidad);
+
+        var numero_impar = 1;
+
+        function imprimirImpar(impar){
+            console.log("impar", impar);
+            console.log("numero_impar", numero_impar);
+            numero_impar = 3; //se puede sobreescribir 
+        }
+        imprimirImpar(numero_impar);
+        console.log("numero nuevo", numero_impar);
+
+    </script>
+</body>
+</html>
