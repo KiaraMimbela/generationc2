@@ -22,14 +22,14 @@
         function ejemplo(){
             console.log("Estoy dentro de la función");
         }
-        ejemplo();
+        ejemplo();//llamado de la función
 
         //dentro los() se le puede poner los parametros
-        function imprimir(cantidad){//cantidad = 3
+        function imprimir(cantidad){//cantidad = [1,2,3,4]
             console.log("Parametro", cantidad);
         }
         //aqui es ()argumento, no se limita a numero o string o arreglo
-        imprimir([2,3,4]);
+        imprimir([1,2,3,4]);
         //console.log(cantidad);
 
         var numero_impar = 1;
@@ -41,6 +41,53 @@
         }
         imprimirImpar(numero_impar);
         console.log("numero nuevo", numero_impar);
+
+        //Retorno
+        function sumaNumeros(){
+            console.log(numero_impar + 4);//console.log(3+4)
+            return numero_impar + 4;//return 7;
+        }
+
+        var numeroRetornado = sumaNumeros();//llamado a la funcion
+        console.log("número retornado ", numeroRetornado); // número retornado 7
+
+        function sumaImpar(){
+            return 3 + 5;// return 8
+        }
+        var impares = sumaImpar()//llama a la funcion
+        console.log("suma impares", impares);//8, retorna la suma
+        console.clear();
+
+        function multiplicacion(numero1, numero2){//va a recibir 2 valores
+            //se puede crear una variable para la multiplicacion pero seria innecesario
+            //let multi = numero1 * numero2;
+            //return multi; //es lo mismo pero innecesario, ocupa memoria
+            return numero1 * numero2;
+        }
+
+        var resultadoMultiplicacion = multiplicacion(3,7);
+        //= se llama a la funcion y se le otorga 2 valores
+        //se guardan en la variable creada
+        console.log("El resultado es", resultadoMultiplicacion);
+        //se imprime en la consola el resultado
+
+        console.clear();//limpiar consola
+        //function crearNuevoArreglo(tamaño del arreglo)
+        function crearNuevoArreglo(numero){
+            var arreglo = []; //creando un arreglo vacio
+            for(let i = 0; i <= numero; i++){
+                if(i % 2 == 0){//verifica si es par
+                arreglo.push(i);//sube los pares al arreglo
+                }//agrega los valores(i) al arreglo
+            }
+            return arreglo;
+        }
+        var numeroIngresado = parseInt(prompt("Ingresa un número", 0));
+        var miArreglo = crearNuevoArreglo(numeroIngresado);
+        //var miArreglo = crearNuevoArreglo(se pone el numero);
+        console.log("mi arreglo", miArreglo);
+
+
 
     </script>
 </body>
