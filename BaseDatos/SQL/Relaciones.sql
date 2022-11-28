@@ -1,69 +1,79 @@
--- ejercicio
-/**
- *tabla direcciones
- *id, nombre, numero, ciudad 
- *
- *agregar a todas las tablas la relacion 
- *administrativos, estudiantes, tecnicos, profesores(fk)
- *
- *2 inserciones en las tablas 
- ***/
-
--- creando la tabla direcciones
-create table direcciones(
+-- relaciones
+create table proveedores(
 	id int primary key not null auto_increment,
 	nombre varchar(100) not null,
-	numero int not null,
-	ciudad varchar(100) not null
+	rut varchar(100) not null
 );
 
+create table direccion(
+	id int primary key not null auto_increment,
+	calle varchar(100) not null,
+	numero int not null,
+	sector varchar(100) not null,
+	ciudad varchar(100) not null,
+	region varchar(100) not null,
+	codigo_postal int,
+	proveedorId int not null);
+
+-- crear la fk de una sola aa
+alter table direccion
+add constraint fk_proveedor_id -- agregandole nombre a la relación
+foreign key (proveedorId) references proveedores(id);
+
 -- insertando
-insert into direcciones (nombre, numero, ciudad)
-values ("Santa Elena", 1722, "Santiago"), ("Cartagena", 2, "Santiago"),
-("Siempre viva", 22, "Macul");
+insert into proveedores (nombre, rut)
+values ("Luisa", "676767-9"), ("Marco", "34343-3"),("Pedro", "535353-3");
 
--- agregar la fk
--- crearla la fk en estudiantes
-alter table estudiantes 
-add direcciones_id int;
--- relacionando
-alter table estudiantes
-add foreign key (direcciones_id) references direcciones(id);
--- crearla la fk en estudiantes
-alter table administrativos  
-add direcciones_id int;
--- relacionando
-alter table administrativos 
-add foreign key (direcciones_id) references direcciones(id);
--- crearla la fk en estudiantes
-alter table profesores  
-add direcciones_id int;
--- relacionando
-alter table profesores  
-add foreign key (direcciones_id) references direcciones(id);
--- crearla la fk en estudiantes
-alter table tecnicos  
-add direcciones_id int;
--- relacionando
-alter table tecnicos  
-add foreign key (direcciones_id) references direcciones(id);
+insert into direccion (calle, numero, sector, ciudad, region, codigo_postal, proveedorId)
+values ("buena vida", 33, "Santigo", "Santiago", "RM", 080808, 2), 
+("Santa Elena", 22, "Santiago", "Santiago", "Santiago", 67676, 3),
+("Arbusto", 2, "Central", "Parque", "Afuera", 676767, 1);
 
-update estudiantes set direcciones_id = 1
-where id = 1;
-update estudiantes set direcciones_id = 2
-where id = 2;
-update estudiantes set direcciones_id = 3
-where id = 3;
-update estudiantes set direcciones_id = 2
-where id = 4;
+insert into direccion (calle, numero, sector, ciudad, region, proveedorId)
+values ("Bladosa", 11, "Garden", "Red", "Road", 3);
 
-insert into administrativos (nombre, apellido, direcciones_id)
-values ("Marta", "Lopez", 3), ("Jorge", "Orellana", 1), ("Maria", "Arriaga", 1);
+insert into proveedores (nombre, rut) values ("Juancha", "76767676");
 
-insert into profesores (nombre, apellido, direcciones_id)
-values ("Israel", "Palma",3), ("Alejandro", "Heredia", 1), ("Andrea", "Montecinos",2);
+select * from proveedores;
 
-insert into tecnicos(nombre, apellidos, direcciones_id)
-values ("Marco", "Polo", 2), ("Jasmin", "Vela", 3), ("Javier", "Bozo", 3);
+select * from direccion;
+
+-- SQL JOINs
+
+select * from proveedores p 
+inner join direccion d 
+on p.id = d.proveedorId; -- trae los datos existentes 
+
+select * from proveedores p 
+inner join direccion d 
+on p.id = d.proveedorId
+where p.id = 3;
+
+select d. * from proveedores p 
+inner join direccion d 
+on p.id = d.proveedorId
+where p.id = 3;
+
+select d.id, d.calle, d. numero, p.nombre
+from proveedores p 
+inner join direccion d 
+on p.id = d.proveedorId
+where p.id = 3;
+
+select p. * from proveedores p 
+inner join direccion d 
+on p.id = d.proveedorId
+where p.id = 3;
 
 
+-- left join
+select * 
+from proveedores p 
+left join direccion d 
+on p.id = d.proveedorId;
+
+-- right join
+select * 
+from proveedores p 
+right join direccion d 
+on p.id = d.proveedorId;
