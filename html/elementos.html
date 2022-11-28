@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--lenguaje en que se ve la pagina-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos HTML</title>
+</head>
+<body>
+    <!--Comentario-->
+
+    <!-- Títulos o Heading, del H1 al H6-->
+
+    <h1 id="top">STRAY KIDS</h1>
+    <h2>Los lideres de la 4th generación</h2>
+    <h3>Stray Kids world domination</h3>
+    <h4>You make Stray Kids stay</h4>
+    <h5>Stray Kids everywhere all around the world</h5>
+    <h6>#LoveStay</h6>
+    <br> <!--Salto de linea-->
+    <hr> <!--Linea horizontal-->
+
+    <!--Parráfos-->
+    <p> <b>Stray Kids (en hangul, 스트레이 키즈)</b> es un grupo surcoreano formado en 2017 por JYP Entertainment a través del reality show Stray Kids. <u>El grupo está compuesto actualmente por ocho miembros.</u>​ El 28 de octubre de 2019, JYP Entertainment comunicó que el mayor de los integrantes, Kim Woo-jin, dejaría el grupo y a su vez la agencia por motivos personales que no fueron especificados.Stray Kids lanzó un extended play pre-debut el 8 de enero de 2018​ e hizo su debut oficial el 25 de marzo del mismo año.El 1 de agosto de 2018, su fandom oficial fue nombrado bajo el nombre "STAY".</p>
+    <p>A finales de 2016, los aprendices <i>Bang Christopher (Bang Chan), Seo Chang-bin y Han Ji-sung</i> formaron un trío de hip hop llamado 3Racha, bajo los alias CB97, SpearB y J.One respectivamente.
+        El 18 de enero de 2017, subieron su primer mixtape J/2017/mixtape a SoundCloud.El mixtape está compuesto por siete canciones, entre las cuales se encuentra «Runner's High», una de las canciones que interpretarían luego en el reality show. El 16 de agosto de 2017 subieron su segundo mixtape 3Days, para aquel entonces ya se había anunciado que formarían parte de un nuevo programa de supervivencia. 3Racha lanzó su tercer y último mixtape titulado Horizon el 20 de diciembre de 2017.12</p>
+    <br>
+    <hr>
+
+    <!--Hipervinculo / Anchor-->
+    <a href="http://www.sii.cl">Visite SII</a>
+    <br>
+    <!--atributo target="blank" abre en otra pestaña-->
+    <a href="http://www.sii.cl" target="_blank">Visite SII</a>
+    <br>
+    <!--abrir pagina continua-->
+    <a href="pagina2.html">Click para ir a la pagina 2</a>
+    <br>
+    <!--navegar dentro de la pagina, se debe identificar con id para que se dirija a ese lugar-->
+    <a href="#top">Ir arriba</a>
+    <br><hr>
+    <!--Imagenes-->
+    <img src="assets/img/straykids.jpg" height="200" alt="Stray Kids">
+    <!--Cuando solo se establece el alto(h) o el ancho(w), el otro se ajusta-->
+    <br>
+    <!--mezlar ancor con imagen-->
+    <a href="http://www.sii.cl">
+        <img src="assets/img/sii.png" width="200" alt="sii">
+        <!--El alt es para colocar el texto cuando la pagina no aparezca-->
+    </a>
+    <br>
+    <h2>Sub-Unidades de Stray Kids</h2>
+    <!--Listas ordenadas-->
+    <ol>
+        <li><!--Item de lista, individual--> 3Racha</li>
+        <li>Danceracha</li>
+        <li>Vocalracha</li>
+    </ol>
+    <br>
+    <h2>Integrantes de Stray Kids</h2>
+    <!--Lista desordenada-->
+    <ul>
+        <li>Bang Chan</li>
+        <li>Yang Jeongin</li>
+        <li>Lee Know</li>
+        <li>Seo Changbin</li>
+        <li>Hwang Hyunjin</li>
+        <li>Han Jisung</li>
+        <li>Kim Seungmin</li>
+        <li>Lee Felix</li>
+        
+    </ul>
+    <br>
+    <ul>
+        <li>lista grupos</li>
+        <li>
+            <ul>
+                <li>grupo 7
+                    <ul>
+                        <li>Luisa</li>
+                        <li>Jona</li>
+                        <li>Atenas</li>
+                        <li>Camilo</li>
+                    </ul>
+                </li>
+                <li>grupo 3</li>
+                <li>grupo 5</li>
+                    <ul>
+                        <li>Cynthia</li>
+                        <li>Daniel</li>
+                        <li>Luis</li>
+                        <li>Pablo</li>
+                        <li>Kiara</li>
+                    </ul>
+                <li>grupo 1</li>
+                <li>grupo 4</li>
+                <li>grupo 2</li>
+            </ul>
+        </li>
+        
+    </ul>
+    <br><hr>
+    <!--Tablas-->
+    <!-- Table : thead tbody-->
+    <table>
+        <thead></thead><!--Parte superior de la tabla-->
+            <tr> 
+                <!--Columnas-->
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        <tbody><!--Contenido-->
+            <tr><!--Registro 1-->
+                <td>1</td>
+                <td>Alejandro</td>
+                <td>ale@gmail.com</td>
+                <td>Admin1234*</td>
+            </tr>
+            <tr><!--Registro 2-->
+                <td>2</td>
+                <td>Israel</td>
+                <td>israpal@gmailcom</td>
+                <td>12345</td>
+            </tr>
+            <tr><!--Registro 3-->
+                <td>3</td>
+                <td>Andrea</td>
+                <td>ande@gmail.com</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
