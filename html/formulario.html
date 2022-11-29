@@ -8,21 +8,59 @@
 </head>
 <body>
     <!--Etiquetas-->
+    <h3>Bienvenido!</h3>
     <!--El id debe ser único por página-->
     <!--El name es como se captura en el backend-->
     <!--El type es el tipo de dato que vamos a capturar-->
     <!--Lo blanco es lo que ve el usuario-->
     <!--Lo mismo que se escribe en el id se escribe en el for-->
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre">
-    <br>
+    <input type="text" id="nombre" name="nombre" placeholder="ingrese su nombre"><br><br>
     <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido" name="apellido">
-    <br>
+    <input type="text" id="apellido" name="apellido" placeholder="ingrese su apellido"><br><br>
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    <br>
+    <input type="email" id="email" name="email" placeholder="ingrese su correo"><br><br>
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" placeholder="ingrese su password">
+    <br><hr>
+    <!--Rdio button-->
+    <!--El name se repite para que la función entienda que es un conjunto de opciones, son un conjunto llamado sexo-->
+    <!--Cuando se captura en back con el sexo, el value ayuda para saber que respuesta dio el usuario-->
+    <h3>Rabio buttons</h3>
+    <input type="radio" id="femenino" name="sexo" value="femenino">
+    <label for="femenino">Femenino</label><br>
+    <input type="radio" id="masculino" name="sexo" value="masculino">
+    <label for="masculino">Masculino</label><br>
+    <input type="radio" id="pnd" name="sexo" value="pnd">
+    <label for="pnd">Prefiero no decir</label>
+    <br><hr>
+    <!--Select o combobox-->
+    <!--desplegar varias opciones-->
+    <!--Se agrega un option adicional para controlar el registro-->
+    <h3>Selectores</h3>
+    <select name="sexo2" id="sexo2">
+        <option value="0">Seleccione su sexo</option>
+        <option value="femenino">Femenino</option>
+        <option value="masculino">Masculino</option>
+        <option value="pnd">Prefiero no decir</option>
+    </select>
+    <br><hr>
+    <!--Checkboxes-->
+    <!--Nos permite seleccionar más de una opción y tambien se puede dejar en blanco-->
+    <h3>Checkboxes</h3>
+    <input type="checkbox" id="lunes" name="semana" value="1">
+    <label for="lunes">Lunes</label><br>
+    <input type="checkbox" id="martes" name="semana" value="2">
+    <label for="martes">Martes</label><br>
+    <input type="checkbox" id="miercoles" name="semana" value="3">
+    <label for="miercoles">Miercoles</label><br>
+    <input type="checkbox" id="jueves" name=semana" value="4">
+    <label for="jueves">Jueves</label><br>
+    <input type="checkbox" id="viernes" name="semana" value="5">
+    <label for="viernes">Viernes</label><br>
+    <input type="checkbox" id="sabado" name="semana" value="6">
+    <label for="sabado">Sabado</label><br>
+    <input type="checkbox" id="domingo" name="semana" value="7">
+    <label for="domingo">Domingos</label>
 </body>
 </html>
