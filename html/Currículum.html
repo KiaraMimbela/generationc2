@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://127.0.0.1:5500/CV.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum</title>
+    <link href="./Currículum_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+    *{
+        background-color: rgb(236, 249, 239);
+    }
+    img{
+        margin-left: 90px;
+    }
+    </style>
+</head>
+<body>
+    <form action="http://127.0.0.1:5500/ruta" method="post">
+        <h1>Kiara Mimbela Vasquez</h1>
+        <img src="./Currículum_files/kiara.jfif" height="200" alt="Kiara">
+        <br><hr>
+        <p>Me presento soy Kiara Naomi Mimbela Vasquez, tengo 20 años y soy de nacionalidad Peruana. Desde el 2020 fue que empecé a generar un interés por el mundo de la tecnología por lo que ahora soy parte de un bootcamp intesivo de desarrolladores Full Stack Java que imparte Generation. En el cual no solo aprendo las habilidades técnicas requeridas para la inserción laboral, también nos enseñan las habilidades blandas que son igual de importantes para tener un buen ambiente laboral.</p>
+        <hr>
+        <h3>Habilidades Blandas</h3>
+        <select class="form-select" name="habilidadesBlandas" id="HabilidadesBlandas">
+            <option selected="">Selecciona una habilidad blanda</option>
+            <option value="OrientacionAlDetalle">Orientación al Detalle</option>
+            <option value="Comunicacion">Comunicación</option>
+            <option value="TrabajoEnEquipo">Trabajo en Equipo</option>
+            <option value="GestonDelTiempo">Gestión del Tiempo</option>
+        </select>
+        <br><hr>
+        <h3>Habilidades Tecnicas</h3>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="java" name="habiTec" value="1">
+            <label class="form-check-label" for="java">Java</label><br>
+            <input class="form-check-input" type="checkbox" id="javascript" name="habiTec" value="2">
+            <label class="form-check-label" for="javascript">JavaScript</label><br>
+            <input class="form-check-input" type="checkbox" id="mysql" name="habiTec" value="3">
+            <label class="form-check-label" for="mysql">MySQL</label><br>
+            <input class="form-check-input" type="checkbox" id="html" name="habiTec" value="4">
+            <label class="form-check-label" for="html">HTML</label><br>
+        </div>    
+        <br><hr>
+        <h3>Mis Hobbys</h3>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Escuchar música</li>
+            <li class="list-group-item">Leer mangas</li>
+            <li class="list-group-item">Pasar tiempo de calidad con mi familia</li>
+        </ul>
+        <br><hr>
+        <input type="submit" class="btn btn-success" value="Enviar">
+    </form>
+    <script src="./Currículum_files/bootstrap.bundle.min.js.descarga" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
