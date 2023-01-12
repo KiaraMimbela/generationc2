@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <!--J Query-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!--Css Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        #logo{
+            margin-right: 40%;
+        }
+        #info{
+            background-color: greenyellow;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            // con el for recorrer todos los pokemones
+            // concatenando el i 
+            for (let i = 1; i <= 10; i++) {
+                $('#pokemones').append('<img id="' + i + '" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i + '.png" alt="pokemon">');
+            }
+            //ajax
+            //$.get(URL, function, formatoJSON);
+            // funcion para que al hacer click nos responda con la info del pofemon
+            $('img').click(function () {
+                var id = $(this).attr("id");
+                $.get('https://pokeapi.co/api/v2/pokemon/' + id, function (respuesta) {
+                    console.log(respuesta);
+                    console.log(respuesta.id);
+                    console.log(respuesta.name);
+                    console.log(respuesta.abilities);
+                    console.log(respuesta.height);
+                    console.log(respuesta.weight);
+                    $('#info').text(respuesta.id);
+                    $('#info').text(respuesta.name);
+                    $('#info').text(respuesta.abilities);
+                }, 'json');
+            });
+        });// cierre de jquery
+    </script>
+</head>
+
+<body>
+    <div id="pokemones" class="container-fluid">
+        <img id="logo" src="https://raw.githubusercontent.com/sleduardo20/pokedex/0671af442dff1d8f7141e49eb83b438885bbc9e9/public/img/logo.svg"
+        height="150px"><br>
+    </div>
+    <div id="info" class="container-fluid">
+        <p>Información del pokemon seleccionado</p>
+    </div>
+
+    <!--Js Bootsrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

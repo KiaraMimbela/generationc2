@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .container {
+            background-color: azure;
+            height: 400px;
+        }
+
+        .divclass {
+            width: 20%;
+            height: 20%;
+            display: inline-block;
+        }
+
+        #div1 {
+            background-color: aqua;
+        }
+
+        #div2 {
+            background-color: blue;
+        }
+
+        #div3 {
+            background-color: aquamarine;
+        }
+
+        /*celulares*/
+        @media screen and (max-width: 480px) {
+            .divclass {
+                width: 80%;
+                display: inline-block;
+                background-color: yellowgreen !important;
+                font-size: 60px;
+                border: 2px solid whitesmoke;
+            }
+            .container {
+            background-color: azure;
+            height: 100%;
+        }
+        }
+
+        /*tablet*/
+        @media screen and (min-width: 481px) and (max-width: 1023px) {
+            .divclass {
+                width: 50%;
+                display: inline-block;
+                background-color: blue !important;
+                font-size: 40px;
+                color: antiquewhite;
+                border: 2px solid skyblue;
+                text-align: center;
+            }
+        }
+
+        /*desktop*/
+        @media screen and (min-width: 1024px) {
+            .divclass {
+                width: 90%;
+                font-size: 35px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="divclass" id="div1"><p>Parrafo1</p></div>
+        <div class="divclass" id="div2"><p>Parrafo2</p></div>
+        <div class="divclass" id="div3"><p>Parrafo3</p></div>
+    </div>
+</body>
+
+</html>
